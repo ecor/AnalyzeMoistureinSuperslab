@@ -1,0 +1,17 @@
+Package: AnalyzeMoistureinSuperslab
+Maintainer: Emanuele Cordano <emanuele.cordano@gmail.com>
+License: GPL (>= 2)
+Title: TO DO
+Type: Package
+Author: Emanuele Cordano,...
+Description: TO DO
+Version: 0.1
+Date: 2015-07-03
+Repository: CRAN
+Depends:
+    R (>= 2.10),raster,soilwater
+Imports:
+    rgdal,stringr
+Suggests:
+    soilwater
+URL: xxx
