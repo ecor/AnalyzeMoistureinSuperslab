@@ -23,8 +23,8 @@ library(roxygen2)
 options(repos = c(CRAN="http://cran.r-project.org"))
 
 
-path <- "/home/ecor/Dropbox/R-packages" 
-pkg_name <- "AnalyzeMoistureInSuperslab"
+path <- "/Users/ecor/Dropbox/R-packages" 
+pkg_name <- "AnalyzeMoistureinSuperslab"
 pkg_dir <- paste(path,pkg_name,sep="/")
 cran_pkg_path <- paste(path,"toCran",sep="/")
 cran_pkg_dir <- paste(cran_pkg_path,pkg_name,sep="/")
