@@ -5,13 +5,13 @@ Title: TO DO
 Type: Package
 Author: Emanuele Cordano,...
 Description: TO DO
-Version: 0.1
-Date: 2015-07-03
+Version: 0.1.1
+Date: 2015-07-23
 Repository: CRAN
 Depends:
-    R (>= 2.10),raster,soilwater
+    R (>= 2.10),geotopbricks,soilwater
 Imports:
-    rgdal,stringr
+    rgdal,stringr,raster
 Suggests:
     soilwater
 URL: xxx

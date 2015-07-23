@@ -27,6 +27,10 @@ NULL
 #' 
 #' 
 #' 
+#' 
+#' 
+#' 
+#' 
 SoilWaterStorage <- function(theta,psi,layers=1,fun=sum,na.rm=TRUE,psi_thres=0,comparison=c("<",">","<=",">=","==","!="),indices=1,...) {
 	
 	if (!is.null(psi)) {
@@ -41,8 +45,9 @@ SoilWaterStorage <- function(theta,psi,layers=1,fun=sum,na.rm=TRUE,psi_thres=0,c
 	}
 	
 	mask <- theta[[1]]*0+1
-	
-	if (length(layers)>1) {
+	print(length(layers))
+	print(nlayers(theta))
+	if ((length(layers)>1) & (length(layers)!=nlayers(theta))) {
 		
 			stop("Mismatching lenghth between theta layers and layer argument!")
 		
@@ -63,12 +68,12 @@ SoilWaterStorage <- function(theta,psi,layers=1,fun=sum,na.rm=TRUE,psi_thres=0,c
 	
 	if (!is.null(psi)) {
 		
-		
+		print(comparison)
 		psilog <- do.call(what=comparison[1],args=list(psi,psi_thres))
-	####	print(psilog)
-		ipsilogfalse <- which(raster::as.vector(psilog==0))
-		
-		theta[ipsilogfalse] <- NA
+		print(psilog)
+		##ipsilogfalse <- which(raster::as.vector(psilog==0))
+		psilog[psilog==0] <- NA
+		theta <- theta*psilog
 		na.rm  <- TRUE
 		
 		

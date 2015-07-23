@@ -4,7 +4,7 @@ NULL
 #'  Vertical or Slope-Normal Integration/Aggregation of soil water content 
 #' 
 #' 
-#' @param map soil variable \code{RasterBrick-class} object
+#' @param x soil variable \code{RasterBrick-class} object
 #' @param points ....
 # @param psi soil pressure head content \code{RasterBrick-class} object
 #@param layers layer thickness. It is a scalar or a vector whose length is equal to the number of \code{theta} layers.
@@ -36,16 +36,16 @@ NULL
 
 SoilVariableProfile <- function(x,points,names=NULL...) {
 	
-	if (is.data.frame(points)) {
+	if (is.data.frame(points)) {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
 		
 		
 		points <- cellFromXY(x,points)
+		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 		
-		
-	}
+	}                                                                                                                                                                                                      
 	
 	
-	out <- map[points]
+	out <- x[points]
 	out <- t(out)
 	if (!is.null(names)) {
 		
@@ -56,5 +56,5 @@ SoilVariableProfile <- function(x,points,names=NULL...) {
 	return(out)
 	
 }
-
+                                             
 

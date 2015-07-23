@@ -53,19 +53,7 @@ SurFlowResExp=0.67
 
 FreeDrainageAtLateralBorder = 0.0
  
-HeaderSoilDz	=	"Dz"
-HeaderLateralHydrConductivity	=	"Kh"
-HeaderNormalHydrConductivity	=	"Kv"
-HeaderThetaRes	=	"vwc_r"
-HeaderWiltingPoint	=	"vwc_w"
-HeaderFieldCapacity	=	"vwc_fc"
-HeaderThetaSat	=	"vwc_s"
-HeaderAlpha	=	"alpha"
-HeaderN	=	"n"
-HeaderSpecificStorativity	=	"stor"
-HeaderKthSoilSolids	=	"Kth"
-HeaderCthSoilSolids	=	"Cth"
-HeaderSoilInitPres = "InitPsi"
+                                                  
  
  SoilParFile	=	"in/soil-classes/soil"
  
